@@ -11,6 +11,7 @@ Dup is an efficient search engine, made for more basic search applications.
 ## How it works?
 
 ```
+// do the search
 input.addEventListener("input", () => {
   clearSearchList();
   let formattedInput = input.value;
