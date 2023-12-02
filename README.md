@@ -10,7 +10,7 @@ Dup is an efficient search engine, made for more basic search applications.
 
 ## How it works?
 
-```
+```javascript
 // do the search
 input.addEventListener("input", () => {
   clearSearchList();
@@ -58,4 +58,4 @@ const removeDiacritics = (val) => {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 };
-```javascript
+```
