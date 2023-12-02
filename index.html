@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dup</title>
+    <meta name="keywords" content="search,search bar" />
+    <meta name="description" content="Buscador" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js" defer></script>
+    <script type="module" src="src/searchBar.js"></script>
+    <link rel="stylesheet" href="assets/main.css">
+  </head>
+  <body>
+    <header class="w-screen h-screen bg-secondColor">
+      <div class="container m-auto flex justify-center items-center h-full">
+        <main class="w-full max-w-lg p-3 relative max-h-[110px]">
+          <div class="w-full text-center">
+            <span class="font-bold text-primaryText text-2xl">Dup</span>
+          </div>
+          <div class="my-4 w-full">
+            <input
+              id="input"
+              class="text-white w-full bg-primaryColor rounded-md p-3 ring-1 ring-thirdColor focus:ring-primaryText transition-all border-0 outline-0"
+              placeholder="Buscar algo..."
+              type="text"
+            />
+          </div>
+          <div
+            class="search-list max-h-[200px] touch-auto overflow-y-auto absolute bottom-0 relative w-full rounded-lg bg-primaryColor overflow-hidden"
+          >
+          </div>
+        </main>
+      </div>
+    </header>
+  </body>
+</html>
