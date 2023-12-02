@@ -58,4 +58,4 @@ const removeDiacritics = (val) => {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 };
-```
+```javascript
