@@ -5,15 +5,20 @@ let searchList = document.querySelector(".search-list");
 
 input.addEventListener("input", () => {
   clearSearchList();
-  let formattedInput = input.value;
+  let formattedInput = removeSpaces(input.value)
 
   if (formattedInput.length != 0) {
+
     for (let j = 0; j < database.length; j++) {
+
       let inputLength = formattedInput.length;
+      
+      // takes a part of each string to compare
       let inputUser = removeDiacritics(getPieceOfString(formattedInput, inputLength));
       let db = removeDiacritics(getPieceOfString(database[j], inputLength));
 
       if (inputUser === db) {
+        // if the user value is in the db it will be displayed
         createItemTemplate(database[j]);
       }
     }
@@ -45,3 +50,5 @@ const removeDiacritics = (val) => {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 };
+
+const removeSpaces = (val) => val.split(' ').join('')
