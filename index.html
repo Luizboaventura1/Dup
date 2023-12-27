@@ -9,26 +9,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js" defer></script>
     <script type="module" src="src/searchBar.js"></script>
-    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="w-screen h-screen bg-secondColor">
-      <div class="container m-auto flex justify-center items-center h-full">
-        <main class="w-full max-w-lg p-3 relative max-h-[110px]">
-          <div class="w-full text-center">
-            <span class="font-bold text-primaryText text-2xl">Dup</span>
-          </div>
-          <div class="my-4 w-full">
+      <div class="container mx-auto h-full">
+        <div class="w-full p-4">
+          <span
+            class="font-medium text-primaryText text-xl bg-primaryColor px-3 py-1 rounded-lg"
+            >Busq</span
+          >
+        </div>
+        <main class="w-full max-w-lg p-3 mx-auto relative max-h-[110px]">
+          <div class="my-4 w-full relative rounded-2xl">
             <input
               id="input"
-              class="text-white w-full bg-primaryColor rounded-md p-3 ring-1 ring-thirdColor focus:ring-primaryText transition-all border-0 outline-0"
+              class="text-white w-full absolute left-0 top-0 z-10 bg-primaryColor rounded-full px-4 h-[40px] ring-1 ring-thirdColor focus:ring-primaryText transition-all border-0 outline-0"
               placeholder="Buscar algo..."
               type="text"
             />
-          </div>
-          <div
-            class="search-list max-h-[200px] touch-auto overflow-y-auto absolute bottom-0 relative w-full rounded-lg bg-primaryColor overflow-hidden"
-          >
+            <div
+            class="search-list absolute left-0 top-4 pt-[24px] max-h-[200px] touch-auto overflow-y-auto absolute bottom-0 relative w-full rounded-2xl bg-primaryColor overflow-hidden"
+          ></div>
           </div>
         </main>
       </div>
